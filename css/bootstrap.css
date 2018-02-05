@@ -4353,7 +4353,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     background-image: none;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 0px) {
   .navbar-nav {
     float: left;
     margin: 10px 0px 10px 0px;
@@ -6632,12 +6632,35 @@ li > a::hover {
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
+
 .frontTileSub {
-	display: inline-block;
-	margin: 0px 0px px 0px;
-	border-radius: 5px;
-	background-color: rgba(0, 0, 0, 0.75);
-	padding: 2px 4px 2px 4px;
+	display: none;
+}
+
+.navbar-brand >h1{
+	font-size: 24px;
+	margin-top: 5px;
+	
+}
+
+.navbar-header {
+	height:50px;
+}
+
+@media (min-width: 450px) {
+	.frontTileSub {
+		display: inline-block;
+		margin: 0px 0px 0px 0px;
+		border-radius: 5px;
+		background-color: rgba(0, 0, 0, 0.75);
+		padding: 2px 4px 2px 4px;
+	}
+	.navbar-brand >h1{
+		font-size: 36px;
+	}
+	.navbar-header {
+	height:75px;
+}
 }
 
 body{
