@@ -6348,24 +6348,24 @@ button.close {
   opacity: .5;
 }
 .carousel-control.left {
-	/*
+	left: 0px;
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
   background-image:      -o-linear-gradient(left, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .5)), to(rgba(0, 0, 0, .0001)));
   background-image:         linear-gradient(to right, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
-	*/
+
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
   background-repeat: repeat-x;
 }
 .carousel-control.right {
-  right: 0;
+  right: 0px;
   left: auto;
-	/*
+	
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, .5) 100%);
   background-image:      -o-linear-gradient(left, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, .5) 100%);
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .0001)), to(rgba(0, 0, 0, .5)));
   background-image:         linear-gradient(to right, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, .5) 100%);
-	*/
+	
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
   background-repeat: repeat-x;
 }
@@ -6462,6 +6462,16 @@ button.close {
 
 .carousel-caption .btn {
   text-shadow: none;
+}
+@media screen and (min-width: 1200px) {
+		.carousel-control.left {
+  left: 100px;
+	}
+	
+	.carousel-control.right {
+  right: 100px;
+  left: auto;
+	}
 }
 @media screen and (min-width: 768px) {
   .carousel-control .glyphicon-chevron-left,
@@ -6709,6 +6719,14 @@ li > a::hover {
 
 .frontTileSub {
 	display: none;
+}
+
+.allContentSub {
+	display: block;
+	margin: 0px 0px 0px 0px;
+	border-radius: 5px;
+
+	padding: 2px 4px 2px 4px;
 }
 
 .navbar-brand >h1{
