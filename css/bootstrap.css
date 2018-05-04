@@ -6793,7 +6793,7 @@ li > a::hover {
 	border-radius: 10px;
 	background-color: rgba(255, 255, 255, .05);
 	padding: 10px;
-	margin: 5px;
+	/*margin: 5px;*/
 }
 
 .linkButton:hover{
