@@ -6247,8 +6247,13 @@ button.close {
   border-right-width: 0;
   border-left-color: #fff;
 }
+
 .carousel {
-  position: relative;
+ position: relative;
+}
+
+.media > .carousel {
+ position:fixed;
 }
 .carousel-inner {
   position: relative;
@@ -6356,7 +6361,7 @@ button.close {
 
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
   background-repeat: repeat-x;
-	
+	cursor: pointer;
 	border-radius: 10px;
 }
 .carousel-control.right {
@@ -6370,7 +6375,7 @@ button.close {
 	
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
   background-repeat: repeat-x;
-	
+	cursor: pointer;
 	border-radius: 10px;
 }
 .carousel-control:hover,
@@ -6433,9 +6438,10 @@ button.close {
   text-indent: -999px;
   cursor: pointer;
   background-color: #000 \9;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, .5);
   border: 1px solid #fff;
   border-radius: 10px;
+	box-shadow: 1px 1px #000000FF;
 }
 .carousel-indicators .active {
   width: 12px;
@@ -6791,15 +6797,76 @@ li > a::hover {
 }
 
 .linkButton{
+	display: inline-block;
+	min-width: 75px;
 	border-radius: 10px;
 	background-color: rgba(255, 255, 255, .05);
 	padding: 10px;
+	text-align: center;
 	/*margin: 5px;*/
 }
 
 .linkButton:hover{
 	background-color: rgba(255, 255, 255, .1);
 	text-decoration: none;
+}
+
+.mediaButton{
+	display: inline-block;
+	min-width: 120px;
+	min-height: 50px;
+	border-radius: 10px 10px 0px 0px;
+	background-color: rgba(255, 255, 255, .05);
+	padding: 10px;
+	text-align: center;
+	font-size: 17px;
+	cursor: pointer;
+	 background-image: -webkit-linear-gradient(bottom, rgba(19, 19, 19, 1) 5%, rgba(19, 19, 19, .0001) 25%);
+  background-image:      -o-linear-gradient(bottom, rgba(19, 19, 19, 1) 5%, rgba(19, 19, 19, .0001) 25%);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(19, 19, 19, .5)), to(rgba(0, 0, 0, .0001)));
+  background-image:         linear-gradient(to top, rgba(19, 19, 19, 1) 5%, rgba(19, 19, 19, .0001) 25%);
+	/*margin: 5px;*/
+}
+
+.mediaButton.active{
+	font-size: 19px;
+	background-color: rgba(255, 255, 255, .1);
+	 background-image: -webkit-linear-gradient(bottom, rgba(19, 19, 19, 1) 0%, rgba(19, 19, 19, .0001) 10%);
+  background-image:      -o-linear-gradient(bottom, rgba(19, 19, 19, 1) 0%, rgba(19, 19, 19, .0001)10%);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(19, 19, 19, .5)), to(rgba(0, 0, 0, .0001)));
+  background-image:         linear-gradient(to top, rgba(19, 19, 19, 1) 0%, rgba(19, 19, 19, .0001) 10%);
+}
+
+.mediaButton:hover{
+	background-color: rgba(255, 255, 255, .1);
+	text-decoration: none;
+}
+
+#mediaVideo > iframe {
+	width: 850px;
+	height: 478px;
+}
+
+
+@media (max-width: 992px) {
+	#mediaVideo > iframe {
+		width: 650px;
+		height: 366px;
+	}
+}
+
+@media (max-width: 767px) {
+	#mediaVideo > iframe {
+		width: 500px;
+		height: 281px;
+	}
+}
+
+@media (max-width: 600px) {
+	#mediaVideo > iframe {
+		width: 400px;
+		height: 225px;
+	}
 }
 
 .buttonContainer{

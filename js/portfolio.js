@@ -75,3 +75,27 @@ function UpdateDevGallery(slideId){
 	images[devGalleryIndex].style.display = "block";
 	 dots[devGalleryIndex].className += " active";
 }
+
+function MediaSwitchTab(id){
+	var buttons = document.getElementsByClassName("mediaButton");
+	var i;
+	for(i = 0; i<buttons.length; i++){
+		buttons[i].className = buttons[i].className.replace(" active", "");
+	}
+	buttons[id-1].className += " active";
+	
+	var children = document.getElementById("media").children;
+	for(i = 1; i<children.length; i++){
+		children[i].style.display = "none";
+	}
+	if(id == 1){
+		children[1].style.display = "table";
+	}
+	else if(id == 2){
+		children[2].style.display = "";
+	}
+	
+}
+
+
+
