@@ -6740,11 +6740,11 @@ li > a::hover {
 	/*color: silver;*/
 	margin: 0px 0px 10px 10px;
 	border-radius: 10px;
-	background-color: rgba(0, 0, 0, .75);
+	background-color: rgba(0, 0, 0, .65);
 	padding: 3px 7px 3px 7px;
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	max-width: 290px;
 }
-
 
 .frontTileSub {
 	display: none;
@@ -6768,7 +6768,7 @@ li > a::hover {
 	height:50px;
 }
 
-@media (min-width: 450px) {
+@media (min-width : 450px ){
 	.frontTileSub {
 		display: inline-block;
 		margin: 0px 0px 0px 0px;
