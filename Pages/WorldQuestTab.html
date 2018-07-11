@@ -21,46 +21,36 @@
   <div class="container"> 
     
     <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-     
-      <a class="navbar-brand" href="../index.html"><h1>Vanden Broek Nikos</h1></a> </div>
+    <div class="navbar-header"> <a class="navbar-brand" href="../index.html">
+      <h1>Vanden Broek Nikos</h1>
+      </a> </div>
     
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="navbar-collapse">
       <ul class="nav navbar-nav">
-		<li ><a href="AboutMe.html">About & Contact</a> </li>
-		  <li ><a href="../index.html">All Content</a> </li>
+        <li ><a href="AboutMe.html">About & Contact</a> </li>
+        <li ><a href="../index.html">All Content</a> </li>
         <li ><a href="FrostMoon.html">Level Design</a> </li>
-		<li class="current"><a href="WorldOfWarcraft.html">World of Warcraft</a> </li>
+        <li class="current"><a href="WorldOfWarcraft.html">World of Warcraft</a> </li>
       </ul>
-      
     </div>
     <!-- /.navbar-collapse --> 
   </div>
   <!-- /.container-fluid --> 
 </nav>
-<div class="container">
-    
-</div>
+<div class="container"> </div>
 <hr>
-	 
 <div class="container">
-	<div class="pageTitle">
-	 <h1>World Quest Tab</h1>
-		</div>
-	
-	 <div class="col-lg-12 col-md-12">
-		 <div class="buttonContainer">
-		 <a target="_blank" href="https://github.com/LanceDH/WorldQuestTab" class="linkButton">Source code ⧉</a>
-		<a target="_blank" href="https://www.curseforge.com/wow/addons/worldquesttab" class="linkButton">CurseForge ⧉</a>
-		 </div>
-	</div>
-	
-	<div class="pageTitle">
-	 <h2>Media</h2>
-	</div>
-
-    <div class="col-lg-12 col-md-12" id="media">
+  <div class="pageTitle">
+    <h1>World Quest Tab</h1>
+  </div>
+  <div class="col-lg-12 col-md-12">
+    <div class="buttonContainer"> <a target="_blank" href="https://github.com/LanceDH/WorldQuestTab" class="linkButton">Source code ⧉</a> <a target="_blank" href="https://www.curseforge.com/wow/addons/worldquesttab" class="linkButton">CurseForge ⧉</a> </div>
+  </div>
+  <div class="pageTitle">
+    <h2>Media</h2>
+  </div>
+  <div class="col-lg-12 col-md-12" id="media">
     <div class="mediaButtons">
       <div class="buttonContainer"> <a class="mediaButton active" onClick="MediaSwitchTab(1)">Video</a> <a class="mediaButton" onClick="MediaSwitchTab(2)">Gallery</a> </div>
     </div>
@@ -68,158 +58,79 @@
       <iframe width="560" height="315" src="https://www.youtube.com/embed/EKpS9x5WkcA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
     <div id="carousel1" class="carousel" style="display: none;">
-	  <ol class="carousel-indicators">
-	    <li class="gallery-dot" data-target="#carousel1" data-slide-to="0" class="active" onClick="GalleryToImage(0)" ></li>
-	    <li class="gallery-dot" data-target="#carousel1" data-slide-to="1" onClick="GalleryToImage(1)"></li>
+      <ol class="carousel-indicators">
+        <li class="gallery-dot" data-target="#carousel1" data-slide-to="0" class="active" onClick="GalleryToImage(0)" >
+        </li>
+        <li class="gallery-dot" data-target="#carousel1" data-slide-to="1" onClick="GalleryToImage(1)"></li>
       </ol>
-	  <div class="carousel-inner" role="listbox">
-	    <div class="item active"><img src="../images/WQT/Gallery1.jpg" alt="First slide image" class="center-block">
-        </div>
-	    <div class="item"><img src="../images/WQT/Gallery2.jpg" alt="Second slide image" class="center-block">
-        </div>
-		  
-		  <a class="left carousel-control" onClick="GalleryPrevImage()"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="right carousel-control" onClick="GalleryNextImage()" ><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><span class="sr-only">Next</span></a>
-      </div>
-	</div>
-		</div>
-	
-	<div class="pageTitle">
-	 <h2>Looks neat... but what is it?</h2>
-		</div>
-	
-	<div class="col-lg-12 col-md-12">
-      <div class="frontTile " style="height:auto" >
-		  <div class="tileText">
-			<span>World Quest Tab is and add-on that improves the default UI for world quests. It adds a new tab to the questlog, which offers an easy to read list with all available world quests in a zone, or continent.
-				</span>
-			  <span>
-				  This list can be sorted by criteria such as time left, name, or reward type. Players can also filter the list to only show quests with specific criteria such as reward type, quest type, or faction. 
-				  </span>
-			  <span>
-				  The goal of this addon is to improve the limiter UI features surrounding world quests, making it easier and faster to find what you are looking for. This, while also making sure it fits right in with the default UI, was if it was part of it.
-		  </span>
-			  <span>
-				Thanks to community translators, there is full localization support for Russian, Korean, and Traditional Chinese, and partial support for German, French, Brazilian Portuguese, and Simplified Chinese.
-		  </span>
-		  </div>
-		</div>
-	</div>
-	
-	<div class="pageTitle">
-	 <h2>The itch that needed stratching</h2>
-		</div>
-	
-	<div class="col-lg-12 col-md-12">
-      <div class="frontTile " style="height:auto" >
-		  <div class="tileText">
-			<span>World of Warcraft: Legion brough new content in the form of World Quests. These repeatable quests that rotate around over multiple days, staying available for limited time or if the player completes it. The same quest can come back in rotation some days later, where the player can complete it again.
-		  </span>
-			  <span>
-			  	In addition to world quests, Legion brought Emissary quests. The player gets one new emissary quest each day, which stays available for 3 days. To complete these quests, the player must complete a certain amount of world quests for a specific faction. Upon completion they can collect a box containing variour loot.
-			  </span>
-			  <span>
-			  	By default these quests are marked on the map with simple quest indicators. The player can hover over these indicator to see a tooltip which includes the name, the remaining time available, the objective, the reward, and the faction of the quest.
-			  </span>
-			  <span>
-			  	This is where the main issue lays. The player has to hover over every individual quest marker to indentify the quest and see if it is of use to them or not. And this for every individual zone. If the player is looking to upgrade their equipment, or find a quest for a specific faction for their emisarry quest, they have no way to easily filter these out.
-			  </span>
-		  </div>
-		</div>
-	</div>
-	
-	<div class="col-lg-12 col-md-12">
-      <div class="frontTile " style="height:auto" >
-		  <div class="centerDiv">
-		  <img src="../images/ILW/WoELevel.jpg" alt="" height="150px;"/>
-			  <br/><span class="imgSubscript">Default WoW UI for world quests are map icons with a tooltip.</span>
-		  </div>
-		</div>
-	</div>
-	
-	<div class="pageTitle">
-	 <h2>The thought process</h2>
-		</div>
-	
-	<div class="col-lg-12 col-md-12">
-      <div class="frontTile " style="height:auto" >
-		  <div class="tileText">
-			<span>
-				The first issue to tackle was having to open the map of every indivisual zone to see which quests are available, and some zones might rarely have only 1 quests available. The best way to solve this was to make an overview of all the available quests. An effective way of doing so is to present the quests in a simple list. 
-			  </span>
-			  <span>
-			  	One of my personal goals with addons is to make them fit with the default WoW UI as if it could as well be part of it. The map already has a quest list to the side, which would also be a perfect location for a list of world quests. To make this possible, I decided to use tome trickery, and add 2 tabs at the top of the default list. These could be used to switch between the panel with regular quests, and my list. 
-			  </span>
-			  <span>
-			  	After creating a basic list and having found a location for it, I had to decide what information this list should show, so the player can quickly decide if they are interested or not. The name helps to identify the quest. A small icon indicates the faction the quest belongs to. Another icon indicates the type of quest: If it's elite it might require a group, some people aren't interested in PvP quests, and other might be specificaly looking for a profession or pet battle quest. A color coded time message helps the player decide the urgency for completing the quest. And most importantly; An icon of the reward for obvious reasons. A number on the reward icon also indicates the value of the reward: The amount of gold or resources, the item level increase of a relic, or the amount of Artifac Power an item grants.
-			  </span>
-			  		  </div>
-		</div>
-	</div>
-			  
-	<div class="col-lg-12 col-md-12">
-      <div class="frontTile " style="height:auto" >
-		  <div class="centerDiv">
-		  <img src="../images/ILW/WoELevel.jpg" alt="" height="150px;"/>
-			  <br/><span class="imgSubscript">The list of world quests next to the world map.</span>
-		  </div>
-		</div>
-	</div>
-	
-	<div class="col-lg-12 col-md-12">
-      <div class="frontTile " style="height:auto" >
-		  <div class="tileText">		  
-			  <span>
-			  	The map icon themselves were also in need of an update. This way, if the player in out in the world they could quickly look at the nearby icons to determine their next target.
-			  </span>
-			  <span>
-			  	To help with this, the default icons were replaced with an image of the reward. The elite outline could stay as players might decide to avoid these if they are playing solo. As some icons might be difficult to destinguish if they are equipment, a relic, or an item that grands Artifact Power, a color coded ring was added. Each reward type has its own color. And just like the quest list, a color coded message of the remaining time has added underneath the icon.
-			  </span>
-			  <span>
-			  	The flightmap eventually received the sme treatment. This would help players find which flightpoint would bring them closer to their desired quest.
-			  </span>
-			  <span> 
-				This proved to be a fair challenge to implement due to Blizzard's newer dataprovider system. I needed the provided icons to update their appearance, but these icons are made on the fly though one of these data providers. However these providers have no identifier, so I had to dig through a table to find a table containing some specific variables. Not optimal, but if it works it works, and such is the life of a programmer.
-			  </span>
-		  </div>
-	  </div>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active"><img src="../images/WQT/Gallery1.jpg" alt="First slide image" class="center-block"> </div>
+        <div class="item"><img src="../images/WQT/Gallery2.jpg" alt="Second slide image" class="center-block"> </div>
+        <a class="left carousel-control" onClick="GalleryPrevImage()"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="right carousel-control" onClick="GalleryNextImage()" ><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><span class="sr-only">Next</span></a> </div>
+    </div>
   </div>
-	
-	<div class="col-lg-12 col-md-12">
-      <div class="frontTile " style="height:auto" >
-		  <div class="centerDiv">
-		  <img src="../images/ILW/WoELevel.jpg" alt="" height="150px;"/>
-			  <br/><span class="imgSubscript">The new and updated world map icons quickly providing usefull information.</span>
-		  </div>
-		</div>
-	</div>
-	
-	<div class="col-lg-12 col-md-12">
-      <div class="frontTile " style="height:auto" >
-		  <div class="tileText">		  
-			  <span>
-			  	One last thing of importance, is the ease of use for that player, and how each player has their own playstyle. One player might be trying to specific faction quests for their emissary. Another player might be after new equipemnt. And another player might just enjoy completing every single quest available.
-			  </span>
-			  <span>
-			  	To allow this 
-			  </span>
-		  </div>
-	  </div>
+  <div class="pageTitle">
+    <h2>Looks neat... but what is it?</h2>
   </div>
-	
-	<div class="pageTitle">
-	 <h2>One game, multiple languages</h2>
-		</div>
-	
-	<div class="col-lg-12 col-md-12">
-    <div class="emptyTile" style="height:100px" >
-		<!-- This leaves some room at te bottom for better reading -->
-		</div>
-	</div>
-    <!--</div>-->
+  <div class="col-lg-12 col-md-12">
+    <div class="frontTile " style="height:auto" >
+      <div class="tileText"> <span>World Quest Tab is and add-on that improves the default UI for world quests. It adds a new tab to the questlog, which offers an easy to read list with all available world quests in a zone, or continent. </span> <span> This list can be sorted by criteria such as time left, name, or reward type. Players can also filter the list to only show quests with specific criteria such as reward type, quest type, or faction. </span> <span> The goal of this addon is to improve the limiter UI features surrounding world quests, making it easier and faster to find what you are looking for. This, while also making sure it fits right in with the default UI, was if it was part of it. </span> <span> Thanks to community translators, there is full localization support for Russian, Korean, and Traditional Chinese, and partial support for German, French, Brazilian Portuguese, and Simplified Chinese. </span> </div>
+    </div>
   </div>
-
-
-
+  <div class="pageTitle">
+    <h2>The itch that needed stratching</h2>
+  </div>
+  <div class="col-lg-12 col-md-12">
+    <div class="frontTile " style="height:auto" >
+      <div class="tileText"> <span>World of Warcraft: Legion brough new content in the form of World Quests. These repeatable quests that rotate around over multiple days, staying available for limited time or if the player completes it. The same quest can come back in rotation some days later, where the player can complete it again. </span> <span> In addition to world quests, Legion brought Emissary quests. The player gets one new emissary quest each day, which stays available for 3 days. To complete these quests, the player must complete a certain amount of world quests for a specific faction. Upon completion they can collect a box containing variour loot. </span> <span> By default these quests are marked on the map with simple quest indicators. The player can hover over these indicator to see a tooltip which includes the name, the remaining time available, the objective, the reward, and the faction of the quest. </span> <span> This is where the main issue lays. The player has to hover over every individual quest marker to indentify the quest and see if it is of use to them or not. And this for every individual zone. If the player is looking to upgrade their equipment, or find a quest for a specific faction for their emisarry quest, they have no way to easily filter these out. </span> </div>
+    </div>
+  </div>
+  <div class="col-lg-12 col-md-12">
+    <div class="frontTile " style="height:auto" >
+      <div class="centerDiv"> <img src="../images/ILW/WoELevel.jpg" alt="" height="150px;"/> <br/>
+        <span class="imgSubscript">Default WoW UI for world quests are map icons with a tooltip.</span> </div>
+    </div>
+  </div>
+  <div class="pageTitle">
+    <h2>The thought process</h2>
+  </div>
+  <div class="col-lg-12 col-md-12">
+    <div class="frontTile " style="height:auto" >
+      <div class="tileText"> <span> The first issue to tackle was having to open the map of every indivisual zone to see which quests are available, and some zones might rarely have only 1 quests available. The best way to solve this was to make an overview of all the available quests. An effective way of doing so is to present the quests in a simple list. </span> <span> One of my personal goals with addons is to make them fit with the default WoW UI as if it could as well be part of it. The map already has a quest list to the side, which would also be a perfect location for a list of world quests. To make this possible, I decided to use tome trickery, and add 2 tabs at the top of the default list. These could be used to switch between the panel with regular quests, and my list. </span> <span> After creating a basic list and having found a location for it, I had to decide what information this list should show, so the player can quickly decide if they are interested or not. The name helps to identify the quest. A small icon indicates the faction the quest belongs to. Another icon indicates the type of quest: If it's elite it might require a group, some people aren't interested in PvP quests, and other might be specificaly looking for a profession or pet battle quest. A color coded time message helps the player decide the urgency for completing the quest. And most importantly; An icon of the reward for obvious reasons. A number on the reward icon also indicates the value of the reward: The amount of gold or resources, the item level increase of a relic, or the amount of Artifac Power an item grants. </span> </div>
+    </div>
+  </div>
+  <div class="col-lg-12 col-md-12">
+    <div class="frontTile " style="height:auto" >
+      <div class="centerDiv"> <img src="../images/ILW/WoELevel.jpg" alt="" height="150px;"/> <br/>
+        <span class="imgSubscript">The list of world quests next to the world map.</span> </div>
+    </div>
+  </div>
+  <div class="col-lg-12 col-md-12">
+    <div class="frontTile " style="height:auto" >
+      <div class="tileText"> <span> The map icon themselves were also in need of an update. This way, if the player in out in the world they could quickly look at the nearby icons to determine their next target. </span> <span> To help with this, the default icons were replaced with an image of the reward. The elite outline could stay as players might decide to avoid these if they are playing solo. As some icons might be difficult to destinguish if they are equipment, a relic, or an item that grands Artifact Power, a color coded ring was added. Each reward type has its own color. And just like the quest list, a color coded message of the remaining time has added underneath the icon. </span> <span> The flightmap eventually received the sme treatment. This would help players find which flightpoint would bring them closer to their desired quest. </span> <span> This proved to be a fair challenge to implement due to Blizzard's newer dataprovider system. I needed the provided icons to update their appearance, but these icons are made on the fly though one of these data providers. However these providers have no identifier, so I had to dig through a table to find a table containing some specific variables. Not optimal, but if it works it works, and such is the life of a programmer. </span> </div>
+    </div>
+  </div>
+  <div class="col-lg-12 col-md-12">
+    <div class="frontTile " style="height:auto" >
+      <div class="centerDiv"> <img src="../images/ILW/WoELevel.jpg" alt="" height="150px;"/> <br/>
+        <span class="imgSubscript">The new and updated world map icons quickly providing usefull information.</span> </div>
+    </div>
+  </div>
+  <div class="col-lg-12 col-md-12">
+    <div class="frontTile " style="height:auto" >
+      <div class="tileText"> <span> One last thing of importance, is the ease of use for that player, and how each player has their own playstyle. One player might be trying to specific faction quests for their emissary. Another player might be after new equipemnt. And another player might just enjoy completing every single quest available. </span> <span> To allow this </span> </div>
+    </div>
+  </div>
+  <div class="pageTitle">
+    <h2>One game, multiple languages</h2>
+  </div>
+  <div class="col-lg-12 col-md-12">
+    <div class="emptyTile" style="height:100px" > 
+      <!-- This leaves some room at te bottom for better reading --> 
+    </div>
+  </div>
+  <!--</div>--> 
+</div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
 <script src="../js/portfolio.js"></script> 

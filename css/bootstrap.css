@@ -6825,7 +6825,7 @@ li > a::hover {
   background-image:      -o-linear-gradient(bottom, rgba(19, 19, 19, 1) 5%, rgba(19, 19, 19, .0001) 25%);
   background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(19, 19, 19, .5)), to(rgba(0, 0, 0, .0001)));
   background-image:         linear-gradient(to top, rgba(19, 19, 19, 1) 5%, rgba(19, 19, 19, .0001) 25%);
-	/*margin: 5px;*/
+	margin: 0px 3px;
 }
 
 .mediaButton.active{
@@ -6845,6 +6845,7 @@ li > a::hover {
 #mediaVideo > iframe {
 	width: 850px;
 	height: 478px;
+	border-radius: 10px;
 }
 
 

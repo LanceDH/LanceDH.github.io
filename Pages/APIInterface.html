@@ -48,6 +48,32 @@
 	<div class="col-lg-12 col-md-12">
 		<div class="buttonContainer"> <a target="_blank" href="https://github.com/LanceDH/APIInterface" class="linkButton">Source code ⧉</a> <a target="_blank" href="https://www.curseforge.com/wow/addons/apiinterface" class="linkButton">CurseForge ⧉</a> </div>
 	</div>
+	<div class="pageTitle">
+    <h2>Media</h2>
+  </div>
+  <div class="col-lg-12 col-md-12" id="media">
+    <div class="mediaButtons">
+      <div class="buttonContainer"> <a class="mediaButton active" onClick="MediaSwitchTab(1)">Video</a> <a class="mediaButton" onClick="MediaSwitchTab(2)">Gallery</a> </div>
+    </div>
+    <div class="WIP" id="mediaVideo">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/5iNKTk5vkhQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+    <div id="carousel1" class="carousel" style="display: none;">
+      <ol class="carousel-indicators">
+        <li class="gallery-dot active" data-target="#carousel1" data-slide-to="0" onClick="GalleryToImage(0)" >
+        </li>
+        <li class="gallery-dot" data-target="#carousel1" data-slide-to="1" onClick="GalleryToImage(1)"></li>
+		<li class="gallery-dot" data-target="#carousel1" data-slide-to="2" onClick="GalleryToImage(2)"></li>
+		<li class="gallery-dot" data-target="#carousel1" data-slide-to="3" onClick="GalleryToImage(3)"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active"><img src="../images/APII/Gallery1.jpg" alt="First slide image" class="center-block"> </div>
+        <div class="item"><img src="../images/APII/Gallery2.jpg" alt="Second slide image" class="center-block"> </div>
+		<div class="item"><img src="../images/APII/Gallery3.jpg" alt="Second slide image" class="center-block"> </div>
+		<div class="item"><img src="../images/APII/Gallery4.jpg" alt="Second slide image" class="center-block"> </div>
+        <a class="left carousel-control" onClick="GalleryPrevImage()"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="right carousel-control" onClick="GalleryNextImage()" ><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><span class="sr-only">Next</span></a> </div>
+    </div>
+  </div>
   <!--
 	<div class="col-lg-12 col-md-12">
 		<div class="WIP">
