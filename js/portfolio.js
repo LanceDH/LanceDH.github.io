@@ -88,13 +88,12 @@ function MediaSwitchTab(id){
 	for(i = 1; i<children.length; i++){
 		children[i].style.display = "none";
 	}
-	if(id == 1){
+	if(id === 1){
 		children[1].style.display = "table";
 	}
-	else if(id == 2){
+	else if(id === 2){
 		children[2].style.display = "";
 	}
-	
 }
 
 function CarouselZoomClose(){
