@@ -97,5 +97,16 @@ function MediaSwitchTab(id){
 	
 }
 
+function CarouselZoomClose(){
+	var zoom = document.getElementById("carouselZoom");
+	zoom.style.visibility = "collapse";
+}
+
+function GalleryZoom(something){
+	var zoom = document.getElementById("carouselZoom");
+	zoom.style.visibility = "visible";
+	//document.write(something);
+	zoom.children[0].src = something.src;
+}
 
 
