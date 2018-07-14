@@ -6675,6 +6675,12 @@ li > a::hover {
 	width:100%;
 }
 
+@media (max-width: 991px) {
+	.pageTitle{
+		width:80%;
+	}
+}
+
 .frontTile{
 	height: 150px;
 	display:block;
@@ -6689,7 +6695,7 @@ li > a::hover {
 
 .frontTileBody{
 	background-color: #0B0B0B;
-	opacity: 0.8;
+	opacity: 0.7;
 }
 
 .frontTileBody:hover{
@@ -6824,6 +6830,7 @@ li > a::hover {
 	align-content: center;
 	text-align: center;
 	z-index: 20;
+	cursor: zoom-out;
 	
 }
 
@@ -6841,6 +6848,7 @@ li > a::hover {
 	display: inline-block;
 	margin:auto;
 	vertical-align: middle;
+	
 }
 
 @media (max-width: 992px) {
@@ -6869,6 +6877,7 @@ li > a::hover {
 	padding: 10px;
 	text-align: center;
 	font-weight: bold;
+	margin: 0px 3px;
 	/*margin: 5px;*/
 }
 
@@ -6955,6 +6964,7 @@ li > a::hover {
 	display: table;
 	margin-left: auto;
 	margin-right: auto;
+	max-height: 275px;
 }
 
 .centerDiv > img {
@@ -6962,6 +6972,21 @@ li > a::hover {
 	border-color: black;
 	border-width: 1px;
 	border-style: solid;
+	max-width: 100%;
+	max-height: 250px;
+	cursor: zoom-in;
+}
+
+@media (max-width: 768px) {
+	.centerDiv {
+		max-height: 60%;
+	}
+	/*
+	.centerDiv > img {
+		max-height: 56.25%;
+	}
+	*/
+	
 }
 
 .imgSubscript{

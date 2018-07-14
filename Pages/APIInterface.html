@@ -74,65 +74,68 @@
         <a class="left carousel-control" onClick="GalleryPrevImage()"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="right carousel-control" onClick="GalleryNextImage()" ><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><span class="sr-only">Next</span></a> </div>
     </div>
   </div>
-  <!--
-	<div class="col-lg-12 col-md-12">
-		<div class="WIP">
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/oou-wJxRAQI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <div class="pageTitle">
+	 <h2>Looks neat... but what is it?</h2>
 		</div>
-	</div>
---> 
-  <!--
-	<div id="carousel1" class="carousel slide" data-ride="carousel">
-	  <ol class="carousel-indicators">
-	    <li class="gallery-dot" data-target="#carousel1" data-slide-to="0" class="active" onClick="GalleryToImage(0)" ></li>
-	    <li class="gallery-dot" data-target="#carousel1" data-slide-to="1" onClick="GalleryToImage(1)"></li>
-
-      </ol>
-	  <div class="carousel-inner" role="listbox">
-	    <div class="item active"><img src="../images/FrostMoon/Gallery/Gallery1-Thumb.jpg" alt="Second slide image" class="center-block">
-        </div>
-
-		  <a class="left carousel-control" onClick="GalleryPrevImage()"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="right carousel-control" onClick="GalleryNextImage()"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><span class="sr-only">Next</span></a>
-		  
-      </div>
-		
-	</div>
-	--> 
-  
-  <!--
-	<div class="pageTitle">
-    <h2>Development Gallery</h2>
-  </div>
 	
 	<div class="col-lg-12 col-md-12">
       <div class="frontTile " style="height:auto" >
-		  <div class="devGalleryText">
-			  <span >
-				  This gallery contains images made during development.
-				   </span>
+		  <div class="tileText">
+			<span>API Interface is a small yet helpfull add-on for developers. It helps searching through Blizzard's official API documentation by offering an easy to navigate interface.</span>
+			  <span>In addition, users can search through global variables to find functions that aren't documented yet, or strings for specific formatting and localized texts.</span>
+			  <span>The goal of this add-on is to help the user navigate through the documentation, and quickly find what they are looking for. As a result, it helps speed up development.</span>
 		  </div>
 	  </div>
-	<div id="carousel2" class="carousel slide" data-ride="carousel">
-	  <ol class="carousel-indicators">
-	    <li class="gallery-dot-dev" data-target="#carousel2" data-slide-to="0" class="active" onClick="DevGalleryToImage(0)" ></li>
-	    <li class="gallery-dot-dev" data-target="#carousel2" data-slide-to="1" onClick="DevGalleryToImage(1)" ></li>
-      </ol>
-	  <div class="carousel-inner" role="listbox">
-	    <div class="item-dev active"><img src="../images/FrostMoon/DevGallery/Gallery1-Thumb.jpg" alt="First slide image" class="center-block">
-        </div>
-
-		  <a class="left carousel-control" onClick="DevGalleryPrevImage()"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="right carousel-control" onClick="DevGalleryNextImage()"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><span class="sr-only">Next</span></a>
-      </div>
-		</div>
---> 
-  
-  <!--<div class="row">-->
-  <div class="col-lg-12 col-md-12">
-    <div class="WIP"> <img src="../images/WorkWork.png" alt="WIP"/>
-      <h3 style="text-align: center">Work Work</h3>
-      <span style="text-align: center">This page is still under construction.</span> <span> Our peons (Aka myself) are hard at work to get this page up and running.</span> 
 	</div>
+	
+<div class="pageTitle">
+    <h2>The itch that needed stratching</h2>
   </div>
+	
+	 <div class="col-lg-12 col-md-12">
+      <div class="frontTile " style="height:auto" >
+		  <div class="tileText">
+			<span>In patch 7.2, Blizzard started adding official documentation for their API. Players can search through this documentation through chat command, which print the results into the chat window.</span>
+			  <span>It's a step in the right direction over not having any documentation at all, but the navigation proved to be less than favourable. Other factors such as chat channels or guild chat could easily bump the results out of view. The default chat window size also limits the amount of text that can be displayed, requiring the user to constantly change its size when either developing or playing the game. Chat is also limited in the amount of text it can display. If the user searches for 'player', it won't show relevant functions as they have been bumped out by the rest of the results.</span>
+			  <span></span>
+		  </div>
+		</div>
+	</div>
+	
+	<div class="col-lg-12 col-md-12">
+      <div class="frontTile " style="height:auto" >
+		  <div class="centerDiv">
+		  <img src="../images/APII/Story1.jpg" onClick="GalleryZoom(this)"/>
+			  <br/><span class="imgSubscript">Only half of the info fits in the default chatwindow size.</span>
+		  </div>
+		</div>
+	</div>
+	
+	<div class="pageTitle">
+	 <h2>The thought process</h2>
+		</div>
+	
+	<div class="col-lg-12 col-md-12">
+      <div class="frontTile " style="height:auto" >
+		  <div class="tileText">
+			<span>The most important change was to get the information out of the chatwindow. That way it wouldn't be affected by other chat messages and its limits. The API is something only a very small amount of the userbase would ever come in contact with. This meant there wasn't really anything already existing to incoperate it into. The best solution was to just make a new window.</span> 
+			<span>I could have just copied the returned documantation oen to one into the new window, but then it would still be hard to read. Instead I took inspiration from the achievements window. There all achievements are listed with their name, and the player can expand them if they want more information. As the documentation API returns its information in tables, I could easily turn every table entry into a seperate entry in the list.</span>
+			<span>As every piece of the documentation comes pre-formatted, it could be presented directly with its consistent color codings. Because of this, the add-on also requires minimal maintenance with future updates. Every new piece of documentation will automatically get its own entry in the list.</span>
+			<span>As not all API is updated and documented yet, there are still some functions that won't show up in the list. To combat this, I added several buttons that allow the user to search for global variables and functions. Typing something in the search box and clicking one of the buttons will open a seperate window with a list of all relevant results.</span>
+		  </div>
+		</div>
+	</div>
+	
+	<div class="col-lg-12 col-md-12">
+      <div class="frontTile " style="height:auto; cursor:zoom-in;" >
+		  <div class="centerDiv">
+		  <img src="../images/APII/Story2.jpg" onClick="GalleryZoom(this)"/>
+			  <br/><span class="imgSubscript">Some functions aren't part of the documentation yet, but can still be of use when developing.</span>
+		  </div>
+		</div>
+	</div>
+	
+	
   <div class="col-lg-12 col-md-12">
     <div class="emptyTile" style="height:100px" > 
       <!-- This leaves some room at te bottom for better reading --> 
