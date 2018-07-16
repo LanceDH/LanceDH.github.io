@@ -3984,8 +3984,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li {
   position: relative;
   display: block;
+
 }
 .nav > li > a {
+	text-shadow: 1px 1px 3px black;
   position: relative;
   display: block;
 	margin: 5px 5px;
@@ -6870,6 +6872,7 @@ li > a::hover {
 }
 
 .linkButton{
+	text-shadow: 1px 1px 3px black;
 	display: inline-block;
 	min-width: 75px;
 	border-radius: 10px;
@@ -6887,6 +6890,7 @@ li > a::hover {
 }
 
 .mediaButton{
+	 text-shadow: 1px 1px 3px black;
 	display: inline-block;
 	min-width: 120px;
 	min-height: 50px;
