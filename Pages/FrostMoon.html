@@ -84,9 +84,112 @@
   </div>
   <div class="col-lg-12 col-md-12">
     <div class="frontTile " style="height:auto" >
-      <div class="tileText"> <span>World Quest Tab is and add-on that improves the default UI for world quests. It adds a new tab to the questlog, which offers an easy to read list with all available world quests in a zone, or continent. </span> <span> This list can be sorted by criteria such as time left, name, or reward type. Players can also filter the list to only show quests with specific criteria such as reward type, quest type, or faction. </span> <span> The goal of this addon is to improve the limiter UI features surrounding world quests, making it easier and faster to find what you are looking for. This, while also making sure it fits right in with the default UI, was if it was part of it. </span> <span> Thanks to community translators, there is full localization support for Russian, Korean, and Traditional Chinese, and partial support for German, French, Brazilian Portuguese, and Simplified Chinese. </span> </div>
+      <div class="tileText"> <span>DM - Forst Moon is a 2-4 player Unreal Tournament map, created in the Unreal Editor. It was a first time attempt at working with the Unreal editor.</span>
+		<span>Spread across a 3 month period I learned different topics including:</span>
+		  <ul>
+		  	<li>Creating and improving a blockout to work for a game with given mechanics</li>
+			<li>Balancing a map with both layout and item placement</li>
+			<li>Creating believable and high quality materials</li>
+			<li>Applying lighting to both guide the player, and create a certain mood</li>
+			<li>Creating complex looking designs using a limited amount of models, and trim textures</li>
+			<li>Receiving and using feedback</li>
+		  </ul>
+		</div>
     </div>
   </div>
+	
+  <div class="pageTitle">
+    <h2>The thought process</h2>
+  </div>
+  <div class="col-lg-12 col-md-12">
+    <div class="frontTile " style="height:auto" >
+      <div class="tileText"> 
+		  <span>The first challenge to tackle, was learning how to create a blockout. Much like an artist would, it's important to create a basic layout to get a rough idea on how well it would work out. As it is still a simple construction, it is easy to make drastic changes where needed. If the flow of the gameplay feels off somewhere, you can quickly carve a new doorway, or add an extra wall.</span>
+		  <span>During this process I noticed the importance of keeping the game mechanics in mind. For example, a skilled player can cover a lot of height with a well-timed rocket jump. This makes it important to make sure players can't easily jump out of the map. At the same time, you can use it to your advantage by offering a shortcut for those skilled enough, and dare take the extra damage.</span>
+		  <span>Another important part is the flow of the gameplay. Unreal Tournament is a fast pasted game where you want to get around the map quickly. Part of this comes from skill shortcuts by wall running or sliding under something. Another part comes from the amount of paths you offer to the player. Short corridors have their place, but if a room with a weapon only has two entrance points, you should probably add one or two more.</span>
+		</div>
+    </div>
+  </div>
+	
+	<div class="col-lg-12 col-md-12">
+    <div class="frontTile " style="height:auto" >
+      <div class="centerDiv"> <img src="../images/FrostMoon/story1.jpg" alt="Blockout"  onClick="GalleryZoom(this)" /> <br/>
+        <span class="imgSubscript">Adding more entrances gives the player more choises, creates a better flow, limits camping, and looks more interesting.</span> </div>
+    </div>
+  </div>
+	
+	 <div class="col-lg-12 col-md-12">
+    <div class="frontTile " style="height:auto" >
+      <div class="tileText"> 
+		  <span>The next thing to learn has how to create good looking materials. Luckily Unreal's material editor is a lot easier to get the hang of than having to write HLSL.</span>
+		  <span>I knew I wanted to create some sort of sci-fi base in a cold snowy environment. This meant that I needed to learn how to create different types of materials. The structures would require a solid and steel look. But, I'd also have to create more natural materials such as snow, wet surfaces, and combinations like snow in rocky mountainsides.</span>
+		  <span>The biggest risks of using textures for level design, is that repetition in those textures becomes easy to spot. A typical example would be a tiled floor. So there are tricks that can be used to help minimize this issue.</span>
+		  <span>One of these is to have two different texture of different scale. Say you have a texture of the tile, and a second texture that adds some dirt. If you make the tile texture a size of 1 unit, and the dirt texture a size of 2.5, the same tiles will only repeat every 6th tile.</span>
+		  <span>For repeating models in the level, there are other tricks we can use. Say you want to add scratches so your model, it would look more natural if every model was more unique. An easy way to do so is to take the world position of the model, and use it as an offset for the texture. This way even the slightest change in position will result in a different looking model.</span>
+		  <span>Another option isn't so much a trick, but allows for more control and creates a more natural look. By using vertex painting, you can choose exactly where you want a certain effect to be present. In my project this was used to hand-paint all the snow. This allowed me to decide exactly where I want to create paths in the snow, omit snow due to an overhang, or change the height of the snow.</span>
+		</div>
+    </div>
+  </div>
+	
+	<div class="col-lg-12 col-md-12">
+    <div class="frontTile " style="height:auto" >
+      <div class="centerDiv"> <img src="../images/FrostMoon/story2.jpg" alt="Blockout"  onClick="GalleryZoom(this)" /> <br/>
+        <span class="imgSubscript">I'll just make this simple materia- Oh god I summoned Cthulhu!</span> </div>
+    </div>
+  </div>
+	
+	 <div class="col-lg-12 col-md-12">
+    <div class="frontTile " style="height:auto" >
+      <div class="tileText"> 
+		  <span>At this point the level was starting to get some color, but there's not much point if you can't see anything, so the next part was to figure out lighting.</span>
+		  <span>As I was going for a night scene with a lot of outdoor area, I could use the moonlight to my advantage. Looking for the mood of a cold night I made the base lighting of the scene a darker blue. To contrast this, I gave the lights of the base a warmer orange color. These two colors would compliment each other, creating a cold, but somewhat comforting feeling.</span>
+		  <span>Another important aspect when lighting a level is to find a right balance between light and dark. You don't want anything to become pitch black, but a darker ceiling and brighter walls will keep the player's focus on the same level as where the enemy is likely to show up. Creating a difference between light and dark will also make the level feel less flat and create distinction between areas you can access or not. Using a lot of smaller lights instead of a few big ones also give you better control on where the light and darker areas are.</span>
+		</div>
+    </div>
+  </div>
+	
+	<div class="col-lg-12 col-md-12">
+    <div class="frontTile " style="height:auto" >
+      <div class="centerDiv"> <img src="../images/FrostMoon/story3.jpg" alt="Blockout"  onClick="GalleryZoom(this)" /> <br/>
+        <span class="imgSubscript">Lighting can create a certain mood, but also subconsciously guide the player's attention.</span> </div>
+    </div>
+  </div>
+	
+	 <div class="col-lg-12 col-md-12">
+    <div class="frontTile " style="height:auto" >
+      <div class="tileText"> 
+		  <span>The next step was to dress up the blockout by replacing it with actual meshes. As this was a solo project, time was limited, and I am not a skilled artist, I had to resort to a different kind of level decoration. Using trim textures and reusing models drastically reduced the amount of textures and models required.</span>
+		  <span>Trim textures allow you to texture multiple different objects with a single texture. This texture would consist of different patterns that can be reused and tiled for the different models. As a result, all models also look like they fit together, without having to texture each one individually.</span>
+		  <span>Models could also be reused by changing their scale, using a different part of the model, or give them a different purpose. The top of a model of a wall piece, could be reused in a different orientation to create different looking wall. A pillar could be re-scaled to become a thin separator. And finishing touch could be reused as something to hold up big lights.</span>
+		</div>
+    </div>
+  </div>
+	
+	<div class="col-lg-12 col-md-12">
+    <div class="frontTile " style="height:auto" >
+      <div class="centerDiv"> <img src="../images/FrostMoon/story4.jpg" alt="Blockout"  onClick="GalleryZoom(this)" /> <br/>
+        <span class="imgSubscript">The vertical and horizontal walls are the same model, and the beams and pillars just a different scale.</span> </div>
+    </div>
+  </div>
+	
+	<div class="col-lg-12 col-md-12">
+    <div class="frontTile " style="height:auto" >
+      <div class="tileText"> 
+		  <span>With the big picture done, all that was left to do was to add finishing touches. These would push the visuals of the level just that bit further, making everything look even more impressive.</span>
+		  <span>One of these finishing touches are the addition of particles. A loose cable shakes things up, but adding particles of sparks flying out makes it look more exciting. In my case the addition of light snowfall adds to the cold mood, but also makes it more calming.</span>
+		  <span>Fog can also be a great addition as it adds depth to the scene. It can be used to add a misty or steamy atmosphere to help bring out the feeling of a certain temperature in the level. Or it can add the feeling of height when looking off a cliffside.</span>
+		  <span>The addition of decals can enforce the idea that the level you are walking in is actually inhabited. But, they can also help guiding the player around. An arrow on the wall with the letter 'A' can easily tell the player where to go. And if the player runs past a wall marked 'Sector 3' they can use it to orient themselves if they run past it again later.</span>
+		</div>
+    </div>
+  </div>
+	
+	<div class="col-lg-12 col-md-12">
+    <div class="frontTile " style="height:auto" >
+      <div class="centerDiv"> <img src="../images/FrostMoon/story5.jpg" alt="Blockout"  onClick="GalleryZoom(this)" /> <br/>
+        <span class="imgSubscript">Particles, fog, decals, and smaller props such as pipes make the world feel alive.</span> </div>
+    </div>
+  </div>
+	
   <div class="pageTitle">
     <h2>Development Gallery</h2>
   </div>
@@ -142,17 +245,6 @@
       </div>
     </div>
     
-    <!--<div class="row">-->
-    <div class="col-lg-12 col-md-12">
-      <div class="WIP"> <img src="../images/WorkWork.png"/>
-        <h3 style="text-align: center">Work Work</h3>
-        <span style="text-align: center">This page is still under construction.</span> <span> Our peons (Aka myself) are hard at work to get this page up and running.</span> </div>
-    </div>
-    <div class="col-lg-12 col-md-12">
-      <div class="emptyTile" style="height:100px" > 
-        <!-- This leaves some room at te bottom for better reading --> 
-      </div>
-    </div>
     <div id="carouselZoom" onClick="CarouselZoomClose()">
 		<img src="../images/WQT/Gallery2.jpg" alt="ZoomImg"/>
 	</div>
