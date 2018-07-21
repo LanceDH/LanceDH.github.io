@@ -21,115 +21,130 @@
   <div class="container"> 
     
     <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <a class="navbar-brand" href="../index.html"><h1>Vanden Broek Nikos</h1></a> </div>
+    <div class="navbar-header"> <a class="navbar-brand" href="../index.html">
+      <h1>Vanden Broek Nikos</h1>
+      </a> </div>
     
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="navbar-collapse">
       <ul class="nav navbar-nav">
-		<li ><a href="AboutMe.html">About & Contact</a> </li>
-		  <li ><a href="../index.html">All Content</a> </li>
+        <li ><a href="AboutMe.html">About & Contact</a> </li>
+        <li ><a href="../index.html">All Content</a> </li>
         <li><a href="FrostMoon.html">Level Design</a> </li>
-		<li><a href="WorldOfWarcraft.html">World of Warcraft</a> </li>
+        <li><a href="WorldOfWarcraft.html">World of Warcraft</a> </li>
       </ul>
-      
     </div>
     <!-- /.navbar-collapse --> 
   </div>
   <!-- /.container-fluid --> 
 </nav>
-<div class="container">
-    
-</div>
+<div class="container"> </div>
 <hr>
-	 
 <div class="container">
-	<div class="pageTitle">
-	 <h1>AI Programming</h1>
-		</div>
-	
-	<div class="pageTitle">
-    <h2>Media</h2>
+  <div class="pageTitle">
+    <h1>AI Programming</h1>
   </div>
-  <div class="col-lg-12 col-md-12" id="media">
-    <div class="WIP" id="mediaVideo">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/38iAG7XZkVY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <div class="col-lg-12 col-md-12">
+    <div class="buttonContainer"> <a target="_blank" href="https://github.com/LanceDH/GameplayProgramming/" class="linkButton">Source code ⧉</a> </div>
+    <div class="pageTitle">
+      <h2>Media</h2>
+    </div>
+    <div class="col-lg-12 col-md-12" id="media">
+      <div class="mediaButtons">
+        <div class="buttonContainer"> <a class="mediaButton active" onClick="MediaSwitchTab(1)">Video</a> <a class="mediaButton" onClick="MediaSwitchTab(2)">Gallery</a> </div>
+      </div>
+      <div id="mediaVideo">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/38iAG7XZkVY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <div id="carousel1" class="carousel" style="display: none;">
+        <ol class="carousel-indicators">
+          <li class="gallery-dot active" data-target="#carousel1" data-slide-to="0" onClick="GalleryToImage(0)" > </li>
+          <li class="gallery-dot" data-target="#carousel1" data-slide-to="1" onClick="GalleryToImage(1)"></li>
+          <li class="gallery-dot" data-target="#carousel1" data-slide-to="2" onClick="GalleryToImage(2)"></li>
+			<li class="gallery-dot" data-target="#carousel1" data-slide-to="3" onClick="GalleryToImage(3)"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <div class="item active"><img src="../images/AIProg/Gallery1.jpg" alt="First slide image" class="center-block" onClick="GalleryZoom(this)"> </div>
+          <div class="item"><img src="../images/AIProg/Gallery2.jpg" alt="Second slide image" class="center-block" onClick="GalleryZoom(this)"> </div>
+          <div class="item"><img src="../images/AIProg/Gallery3.jpg" alt="Second slide image" class="center-block" onClick="GalleryZoom(this)"> </div>
+		  <div class="item"><img src="../images/AIProg/Gallery4.jpg" alt="Second slide image" class="center-block" onClick="GalleryZoom(this)"> </div>
+          <a class="left carousel-control" onClick="GalleryPrevImage()"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="right carousel-control" onClick="GalleryNextImage()" ><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><span class="sr-only">Next</span></a> </div>
+      </div>
+    </div>
+    
+    <!--<div class="row">-->
+    <div class="pageTitle">
+      <h2>Looks neat... but what is it?</h2>
+    </div>
+    <div class="col-lg-12 col-md-12">
+      <div class="frontTile " style="height:auto" >
+        <div class="tileText"> <span>This c++ project was on learning how to write an AI that could survive for as long as possible, with limited in- and outputs. This is done by writing a plugin for the AI, which is then loaded by a separate program.</span> <span>Given is a map containing houses, enemy AI, random item spawns, and checkpoints. All that is available to the plugin is some information such as health of our AI, entities or building in its field of view, and the closest point of the navmesh path to a specific location. It is up to the plugin to use this data to determine what its actions should be. All the plugin can do to steer the AI is return a simple struct with information such as rotation speed, movement speed, whether it should run or not, or inventory actions such as picking up or using an item.</span> <span>The goal is to have the AI survive as long as possible and try to get a high score. Points are awarded for actions such as picking up an item, shooting and killing enemies, and reaching checkpoints. Points can also be deducted for missing an enemy, or invalid actions like attempting to use an item in an empty inventory slot. Other important factors is that the AI will lose health when it's hungry, and a timer requiring enemies to be killed on a regular basis.</span></div>
+      </div>
+    </div>
+    <div class="pageTitle">
+      <h2>The thought process</h2>
+    </div>
+    <div class="col-lg-12 col-md-12">
+      <div class="frontTile " style="height:auto" >
+        <div class="tileText"> <span>First things first, was getting some basics going. I'd have to get the AI moving towards the checkpoints and avoiding enemies along the way. One part of this was favoring being inside a building over being out in the open, the other was actually dodging the enemy AI. To get this going I opted for a priority steering with a simple seek and an obstacle avoidance behaviour. </span> 
+		  <span>When an enemy AI enters the FoV, our plugin will create a temporary circle around it, which marks the area as dangerous. These are used in the obstacle avoidance behaviour so our AI can try to move around it. If there are no enemies in sight, the seek behaviour takes over to simply follow the path the navmesh gives us.</span>
+			<span>To prioritize being inside a building I used a behaviour tree to give our AI the ability to make decision based on certain conditions. In addition, I created a new class to store information about the world. This would include the location of buildings, and eventually their walls, which the plugin would carve doors into if it was able to walk though them. To keep the building behaviour simple, I made it so that if the AI saw a building, it would run to its center. Once there the building would be marked as 'visited' before moving on, preventing the AI from getting stuck in the same buildings. Once the AI reached a waypoint, all buildings would stop being marked, so they once again can be entered as it moves to the next waypoint.</span>
+		  </div>
+      </div>
+    </div>
+	  
+	  <div class="col-lg-12 col-md-12">
+    <div class="frontTile " style="height:auto" >
+      <div class="centerDiv"> <img src="../images/AIProg/story1.jpg" alt="" onClick="GalleryZoom(this)"/> <br/>
+        <span class="imgSubscript">360 no-scope.</span> </div>
     </div>
   </div>
-	<!--
-	<div class="col-lg-12 col-md-12">
-		<div class="WIP">
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/oou-wJxRAQI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-		</div>
-	</div>
--->
-	<!--
-	<div id="carousel1" class="carousel slide" data-ride="carousel">
-	  <ol class="carousel-indicators">
-	    <li class="gallery-dot" data-target="#carousel1" data-slide-to="0" class="active" onClick="GalleryToImage(0)" ></li>
-	    <li class="gallery-dot" data-target="#carousel1" data-slide-to="1" onClick="GalleryToImage(1)"></li>
-
-      </ol>
-	  <div class="carousel-inner" role="listbox">
-	    <div class="item active"><img src="../images/FrostMoon/Gallery/Gallery1-Thumb.jpg" alt="Second slide image" class="center-block">
-        </div>
-
-		  <a class="left carousel-control" onClick="GalleryPrevImage()"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="right carousel-control" onClick="GalleryNextImage()"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><span class="sr-only">Next</span></a>
-		  
-      </div>
-		
-	</div>
-	-->
-	
-	<!--
-	<div class="pageTitle">
-    <h2>Development Gallery</h2>
-  </div>
-	
-	<div class="col-lg-12 col-md-12">
+	  
+	   <div class="col-lg-12 col-md-12">
       <div class="frontTile " style="height:auto" >
-		  <div class="devGalleryText">
-			  <span >
-				  This gallery contains images made during development.
-				   </span>
+        <div class="tileText"> <span>Once I had movement, I could start focusing on the items and the inventory. As picking up an item rewards points, I figured we might as well pick up any item we come across. However, this does mean we need to keep our inventory balnaced. We want to avoid stacking up on a single type of item and eventually dying of starvation because we only had pistols.</span>
+		  <span>As long as our inventory isn't full, we don't care what we have in our inventory because there's always room for more. Once the inventory is full and we see another item, a decision is made for which item is of least value. The type we have the most of is of least value. Medkits have the least value followed by food, as we can alway use them to get their benefit and make room. If there is a decision is made which type is the least value, the item of that type that restores the least or has the least ammo is used.</span>
+			<span>Now that we can pick up guns, we also have to make sure our AI can actually aim and shoot at enemies. To do so I decided to go with the equation for <a href="http://mathworld.wolfram.com/Circle-LineIntersection.html" target="_blank">circle-line intersection</a>. This returns a disciminant which, if zero or above, means an enemy is right in front of us. In case we see enemies, but there is none in front of us, we can calculate the discriminant for all visible enemies. The highest value (closest to zero) is the shorest rotation required to aim towards. By calculating the angle between our sight and our target, we can then determine what direction rotate to.</span>
 		  </div>
-	  </div>
-	<div id="carousel2" class="carousel slide" data-ride="carousel">
-	  <ol class="carousel-indicators">
-	    <li class="gallery-dot-dev" data-target="#carousel2" data-slide-to="0" class="active" onClick="DevGalleryToImage(0)" ></li>
-	    <li class="gallery-dot-dev" data-target="#carousel2" data-slide-to="1" onClick="DevGalleryToImage(1)" ></li>
-      </ol>
-	  <div class="carousel-inner" role="listbox">
-	    <div class="item-dev active"><img src="../images/FrostMoon/DevGallery/Gallery1-Thumb.jpg" alt="First slide image" class="center-block">
-        </div>
-
-		  <a class="left carousel-control" onClick="DevGalleryPrevImage()"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="right carousel-control" onClick="DevGalleryNextImage()"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><span class="sr-only">Next</span></a>
       </div>
-		</div>
--->
-	
-  <!--<div class="row">-->
-    <div class="col-lg-12 col-md-12">
-		<div class="WIP">
-      <img src="../images/WorkWork.png"/>
-			<h3 style="text-align: center">Work Work</h3>
-			<span style="text-align: center">This page is still under construction.</span>
-			<span>
-			Our peons (Aka myself) are hard at work to get this page up and running.</span>
-		</div>
-	</div>
-	
-<div class="col-lg-12 col-md-12">
-    <div class="emptyTile" style="height:100px" >
-		<!-- This leaves some room at te bottom for better reading -->
-		</div>
-	</div>
-
-    <!--</div>-->
+    </div>
+	  
+	  <div class="col-lg-12 col-md-12">
+    <div class="frontTile " style="height:auto" >
+      <div class="centerDiv"> <img src="../images/AIProg/story2.jpg" alt="" onClick="GalleryZoom(this)"/> <br/>
+        <span class="imgSubscript">Staying prepared with a balanced inventory.</span> </div>
+    </div>
   </div>
-
-
-
+	  
+	  <div class="col-lg-12 col-md-12">
+      <div class="frontTile " style="height:auto" >
+        <div class="tileText">
+			<span>At this point the AI was doing an OK job at surviving, but I started noticing it was having a harder and harder time finding items. After closer inspection, I discovered that all new items were spawning inside a building the AI had never visited. So, they would essentially be out of the game unless the AI was lucky enough that the waypoint would spawn in this building.</span>
+		  <span>I figured 'old' buildings would be a key to surviving because items are of great importance. To keep these items in the pool, I had to make sure the AI would visit these buildings regularly. As I already stored some information about building, I could simply add a 'last visible' variable to keep track of which building is the oldest.</span>
+			<span>At this point I could stop going for waypoints and instead treat them as bonus points. The AI would keep going for the next building, visiting other buildings along the way. If it enters a building where the waypoint is located, it picks it up.</span>
+			<span>All that needed to be done was to make sure the AI knows the locations of all the buildings. To do so, I divided the map into multiple zones, marked by a big circle. Once the AI enters the world, it goes for the first zone. Once a zone it reached, the plugin goes for the next one and so on, visiting every house it runs into. Once the last zone is reached, the AI goes on its tour to visit the old buildings.</span>
+			<span>From this point, the AI was pretty much immortal.</span>
+		  </div>
+      </div>
+    </div>
+	  
+	  <div class="col-lg-12 col-md-12">
+    <div class="frontTile " style="height:auto" >
+      <div class="centerDiv"> <img src="../images/AIProg/story4.jpg" alt="" onClick="GalleryZoom(this)"/> <br/>
+        <span class="imgSubscript">Scanning the entire map once, ensures we know the existance of every building.</span> </div>
+    </div>
+  </div>
+	  
+    <div class="col-lg-12 col-md-12">
+      <div class="emptyTile" style="height:100px" > 
+        <!-- This leaves some room at te bottom for better reading --> 
+      </div>
+    </div>
+    
+    <!--</div>--> 
+  </div>
+</div>
+<div id="carouselZoom" onClick="CarouselZoomClose()"> <img src="../images/WQT/Gallery2.jpg" alt="ZoomImg"/> </div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
 <script src="../js/portfolio.js"></script> 

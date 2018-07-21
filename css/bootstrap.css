@@ -6263,6 +6263,7 @@ button.close {
   position: relative;
   width: 100%;
   overflow: hidden;
+	min-height: 200px;
 }
 .carousel-inner > .item ,
 .carousel-inner > .item-dev {
@@ -6519,7 +6520,7 @@ button.close {
   .carousel-control .icon-next {
     width: 50px;
     height: 50px;
-    margin-top: -10px;
+    margin-top: -25px;
     font-size: 50px;
   }
   .carousel-control .glyphicon-chevron-left,
@@ -6704,6 +6705,10 @@ li > a::hover {
 	opacity: 1;
 }
 
+.disabled {
+	filter:grayscale(100%);
+}
+
 .tileText {
 	height: auto;
 	width:100%;
@@ -6792,7 +6797,7 @@ li > a::hover {
 }
 
 .lastEdit {
-	width:auto
+	width:auto;
 	position: fixed;
 	right: 10px;
   opacity: 0.5;
@@ -6873,6 +6878,9 @@ li > a::hover {
 
 .carousel-inner > .item, .carousel-inner > .item-dev{
 	cursor:zoom-in;
+	text-align: center;
+	min-height: 200px;
+	vertical-align: text-bottom;
 }
 
 .linkButton{
