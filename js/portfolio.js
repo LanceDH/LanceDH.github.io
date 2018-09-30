@@ -89,7 +89,7 @@ function MediaSwitchTab(id){
 		children[i].style.display = "none";
 	}
 	if(id === 1){
-		children[1].style.display = "table";
+		children[1].style.display = "block";
 	}
 	else if(id === 2){
 		children[2].style.display = "";

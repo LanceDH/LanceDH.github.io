@@ -4300,6 +4300,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   display: block;
 }
 
+.navbar-brand > p {
+  font-size: 12px;
+	margin-left: 5px;
+	color: #888;
+}
+
 @media (min-width: 768px) {
   .navbar > .container .navbar-brand,
   .navbar > .container-fluid .navbar-brand {
@@ -6637,12 +6643,12 @@ li.current {
 li.current > a {
 	/*color: #F5F5F5;*/
 	border-radius: 10px;
-	background-color: rgba(255, 255, 255, .2);
+	background-color: rgba(255, 255, 255, .3);
 }
 
 li > a::hover {
 	color: #FFFFFF;border-radius: 10px;
-	background-color: rgba(255, 255, 255, .3);
+	background-color: rgba(255, 255, 255, .4);
 }
 
 .WIP {
@@ -6740,7 +6746,7 @@ li > a::hover {
 	display:block;
 	padding: 0px 10px 0px 15px;
 	margin: 0px;
-	text-indent: -5px;
+	/*text-indent: -5px;*/
 }
 
 .tileText table {
@@ -6796,7 +6802,7 @@ li > a::hover {
 
 .navbar-brand >h1{
 	font-size: 24px;
-	margin-top: 5px;
+	margin: 5px 0px 0px;
 }
 
 .lastEdit {
@@ -7027,6 +7033,7 @@ li > a::hover {
 body{
 	background-color: #202020;
 	color: silver;
+	overflow-y: scroll;
 	
 	background-image: -webkit-linear-gradient(bottom, rgba(32, 32, 32, 1) 5%, rgba(32, 32, 32, .0001) 25%);
   background-image:      -o-linear-gradient(bottom, rgba(32, 32, 32, 1) 5%, rgba(32, 32, 32, .0001) 25%);
