@@ -3398,6 +3398,9 @@ textarea.input-group-sm > .form-control, textarea.input-group-sm > .input-group-
 	font-size: 16px;
 	border-radius: 10px;
 	background-color: rgba(255, 255, 255, .1);
+	border-color: black;
+	border-width: 1px;
+	border-style: solid;
 }
 .nav > li > a:hover, .nav > li > a:focus {
 	text-decoration: none;
@@ -3672,7 +3675,7 @@ textarea.input-group-sm > .form-control, textarea.input-group-sm > .input-group-
 .navbar-brand {
 	float: left;
 	height: auto;
-	padding: 15px 15px 5px 15px;
+	padding: 15px 15px 0px 15px;
 	font-size: 18px;
 	line-height: 20px;
 }
@@ -3683,7 +3686,7 @@ textarea.input-group-sm > .form-control, textarea.input-group-sm > .input-group-
 	display: block;
 }
 .navbar-brand > p {
-	font-size: 12px;
+	font-size: 16px;
 	margin-left: 5px;
 	color: #888;
 }
@@ -5836,7 +5839,7 @@ border-style: solid;
 	padding: 2px 4px 2px 4px;
 }
 .navbar-brand >h1 {
-	font-size: 24px;
+	font-size: 30px;
 	margin: 5px 0px 0px;
 }
 .lastEdit {
@@ -5926,6 +5929,9 @@ border-style: solid;
 	text-align: center;
 	font-weight: bold;
 	margin: 0px 3px;/*margin: 5px;*/
+	border-color: black;
+	border-width: 1px;
+	border-style: solid;
 }
 .linkButton:hover {
 	background-color: rgba(255, 255, 255, .3);
@@ -5948,6 +5954,11 @@ border-style: solid;
 	background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(32, 32, 32, .5)), to(rgba(0, 0, 0, .0001)));
 	background-image: linear-gradient(to top, rgba(32, 32, 32, 1) 5%, rgba(32, 32, 32, .0001) 25%);
 	margin: 0px 3px;
+	
+	border-left: 1px solid black;
+	border-top: 1px solid black;
+	border-right: 1px solid black;
+
 }
 .mediaButton.active {
 	font-size: 19px;
